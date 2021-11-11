@@ -38,7 +38,7 @@
 							]
 						}
 					},
-					"response": ["Lana","33"]
+					"response": []
 				},
 				{
 					"name": "EP_2",
@@ -80,7 +80,7 @@
 							]
 						}
 					},
-					"response": {"age":"33","family":{"children":[["Alex",24],["Kate",12]],"u_salary_1_5_year":6800},"name":"Lana","salary":1700}
+					"response": []
 				},
 				{
 					"name": "EP_3",
@@ -116,7 +116,7 @@
 							]
 						}
 					},
-					"response": {"age":33,"daily_food":0.6960000000000001,"daily_sleep":145.0,"name":"Lana"}
+					"response": []
 				},
 				{
 					"name": "EP_4",
@@ -152,7 +152,7 @@
 							]
 						}
 					},
-					"response": {"person":{"u_age":33,"u_name":["Lana",1700,33],"u_salary_5_years":7140.0},"qa_salary_after_1.5_year":5610.0,"qa_salary_after_12_months":4590.0,"qa_salary_after_3.5_years":6460.0,"qa_salary_after_6_months":3400,"start_qa_salary":1700}
+					"response": []
 				},
 				{
 					"name": "EP_5",
@@ -188,7 +188,7 @@
 							]
 						}
 					},
-					"response": {"age":"33","family":{"children":[["Alex",24],["Kate",12]],"pets":{"cat":{"age":3,"name":"Sunny"},"dog":{"age":4,"name":"Luky"}},"u_salary_1_5_year":6800},"name":"Lana","salary":1700}
+					"response": []
 				},
 				{
 					"name": "EP_6",
@@ -224,7 +224,7 @@
 							]
 						}
 					},
-					"response": {"age":33,"name":"Lana","salary":[1700,"3400","5100"]}
+					"response": []
 				},
 				{
 					"name": "EP_7",
@@ -266,7 +266,7 @@
 							]
 						}
 					},
-					"response": {"person":{"u_age":33,"u_name":["Lana",1700,33],"u_salary_5_years":7140.0},"qa_salary_after_1.5_year":5610.0,"qa_salary_after_12_months":4590.0,"qa_salary_after_3.5_years":6460.0,"qa_salary_after_6_months":3400,"start_qa_salary":1700}
+					"response": []
 				}
 			]
 		}
