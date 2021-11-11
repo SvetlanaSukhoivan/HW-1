@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "c37db5db-2cf6-49d8-b221-22ab2bd07244",
+		"name": "Group_24",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HW-1_Postman",
+			"item": [
+				{
+					"name": "EP_1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://162.55.220.72:5005/get_method?name=Lana&age=33",
+							"protocol": "http",
+							"host": [
+								"162",
+								"55",
+								"220",
+								"72"
+							],
+							"port": "5005",
+							"path": [
+								"get_method"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lana"
+								},
+								{
+									"key": "age",
+									"value": "33"
+								}
+							]
+						}
+					},
+					"response": ["Lana","33"]
+				},
+				{
+					"name": "EP_2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lana",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "33",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "1700",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://162.55.220.72:5005/user_info_3",
+							"protocol": "http",
+							"host": [
+								"162",
+								"55",
+								"220",
+								"72"
+							],
+							"port": "5005",
+							"path": [
+								"user_info_3"
+							]
+						}
+					},
+					"response": {"age":"33","family":{"children":[["Alex",24],["Kate",12]],"u_salary_1_5_year":6800},"name":"Lana","salary":1700}
+				},
+				{
+					"name": "EP_3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://162.55.220.72:5005/object_info_1?name=Lana&age=33&weight=58",
+							"protocol": "http",
+							"host": [
+								"162",
+								"55",
+								"220",
+								"72"
+							],
+							"port": "5005",
+							"path": [
+								"object_info_1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lana"
+								},
+								{
+									"key": "age",
+									"value": "33"
+								},
+								{
+									"key": "weight",
+									"value": "58"
+								}
+							]
+						}
+					},
+					"response": {"age":33,"daily_food":0.6960000000000001,"daily_sleep":145.0,"name":"Lana"}
+				},
+				{
+					"name": "EP_4",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://162.55.220.72:5005/object_info_2?name=Lana&age=33&salary=1700",
+							"protocol": "http",
+							"host": [
+								"162",
+								"55",
+								"220",
+								"72"
+							],
+							"port": "5005",
+							"path": [
+								"object_info_2"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lana"
+								},
+								{
+									"key": "age",
+									"value": "33"
+								},
+								{
+									"key": "salary",
+									"value": "1700"
+								}
+							]
+						}
+					},
+					"response": {"person":{"u_age":33,"u_name":["Lana",1700,33],"u_salary_5_years":7140.0},"qa_salary_after_1.5_year":5610.0,"qa_salary_after_12_months":4590.0,"qa_salary_after_3.5_years":6460.0,"qa_salary_after_6_months":3400,"start_qa_salary":1700}
+				},
+				{
+					"name": "EP_5",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://162.55.220.72:5005/object_info_3?name=Lana&age=33&salary=1700",
+							"protocol": "http",
+							"host": [
+								"162",
+								"55",
+								"220",
+								"72"
+							],
+							"port": "5005",
+							"path": [
+								"object_info_3"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lana"
+								},
+								{
+									"key": "age",
+									"value": "33"
+								},
+								{
+									"key": "salary",
+									"value": "1700"
+								}
+							]
+						}
+					},
+					"response": {"age":"33","family":{"children":[["Alex",24],["Kate",12]],"pets":{"cat":{"age":3,"name":"Sunny"},"dog":{"age":4,"name":"Luky"}},"u_salary_1_5_year":6800},"name":"Lana","salary":1700}
+				},
+				{
+					"name": "EP_6",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://162.55.220.72:5005/object_info_4?name=Lana&age=33&salary=1700",
+							"protocol": "http",
+							"host": [
+								"162",
+								"55",
+								"220",
+								"72"
+							],
+							"port": "5005",
+							"path": [
+								"object_info_4"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lana"
+								},
+								{
+									"key": "age",
+									"value": "33"
+								},
+								{
+									"key": "salary",
+									"value": "1700"
+								}
+							]
+						}
+					},
+					"response": {"age":33,"name":"Lana","salary":[1700,"3400","5100"]}
+				},
+				{
+					"name": "EP_7",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lana",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "33",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "1700",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://162.55.220.72:5005/user_info_2",
+							"protocol": "http",
+							"host": [
+								"162",
+								"55",
+								"220",
+								"72"
+							],
+							"port": "5005",
+							"path": [
+								"user_info_2"
+							]
+						}
+					},
+					"response": {"person":{"u_age":33,"u_name":["Lana",1700,33],"u_salary_5_years":7140.0},"qa_salary_after_1.5_year":5610.0,"qa_salary_after_12_months":4590.0,"qa_salary_after_3.5_years":6460.0,"qa_salary_after_6_months":3400,"start_qa_salary":1700}
+				}
+			]
+		}
+	]
+}
