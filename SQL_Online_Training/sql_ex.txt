@@ -1,0 +1,184 @@
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=1
+Задание: 1 
+Найдите номер модели, скорость и размер жесткого диска для всех ПК стоимостью менее 500 дол. Вывести: model, speed и hd
+Решение:
+SELECT  model, speed, hd  
+FROM PC 
+WHERE price < 500
+____________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=2
+Задание: 2 
+Найдите производителей принтеров. Вывести: maker
+Решение:
+SELECT DISTINCT maker  
+FROM Product
+WHERE type = 'Printer'
+____________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=3
+Задание: 3 
+Найдите номер модели, объем памяти и размеры экранов ПК-блокнотов, цена которых превышает 1000 дол.
+Решение:
+SELECT model, ram, screen 
+FROM Laptop
+WHERE price > 1000
+____________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=4
+Задание: 4 
+Найдите все записи таблицы Printer для цветных принтеров.
+Решение:
+SELECT * 
+FROM printer
+WHERE color = 'y'
+___________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=5
+Задание: 5 
+Найдите номер модели, скорость и размер жесткого диска ПК, имеющих 12x или 24x CD и цену менее 600 дол.
+Решение:
+SELECT model, speed, hd 
+FROM PC
+WHERE (cd ='12x'OR cd ='24x') AND price < 600 
+___________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=6
+Задание: 6 
+Для каждого производителя, выпускающего ПК-блокноты c объёмом жесткого диска не менее 10 Гбайт, найти скорости таких ПК-блокнотов. Вывод: производитель, скорость.
+Решение:
+SELECT DISTINCT Product.maker,Laptop.speed
+FROM Product JOIN 
+Laptop ON Product.model = Laptop.model 
+WHERE Laptop.hd >= 10
+
+или 
+
+SELECT DISTINCT Product.maker, laptop.speed
+FROM Product, laptop
+WHERE product.model = laptop.model AND
+laptop.hd >= 10
+___________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=7
+Задание: 7 
+Найдите номера моделей и цены всех имеющихся в продаже продуктов (любого типа) производителя B (латинская буква).
+Решение:
+SELECT DISTINCT PC.model,price
+FROM Product 
+JOIN PC 
+ON Product.model=PC.model
+WHERE Product.maker='B'
+UNION
+SELECT DISTINCT Laptop.model,price
+FROM Product 
+JOIN Laptop 
+ON Product.model=Laptop.model
+WHERE Product.maker='B'
+UNION
+SELECT DISTINCT Printer.model, price
+FROM Product 
+JOIN Printer 
+ON Product.model=Printer.model
+WHERE Product.maker='B'
+__________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=8
+Задание: 8 
+Найдите производителя, выпускающего ПК, но не ПК-блокноты.
+Решение:
+SELECT DISTINCT maker 
+FROM product
+WHERE type = 'PC'
+AND maker NOT IN (SELECT maker FROM product WHERE type = 'Laptop')
+
+или
+
+SELECT maker 
+FROM Product 
+WHERE type='PC'
+EXCEPT
+SELECT maker
+FROM Product
+WHERE type='Laptop'
+___________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=9
+Задание: 9 
+Найдите производителей ПК с процессором не менее 450 Мгц. Вывести: Maker
+Решение:
+SELECT DISTINCT product.maker 
+FROM product
+JOIN PC
+ON pc.model = product.model
+WHERE speed >= 450
+___________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=10
+Задание: 10 
+Найдите модели принтеров, имеющих самую высокую цену. Вывести: model, price
+Решение:
+SELECT DISTINCT printer.model,printer.price 
+FROM product,printer
+WHERE price =(SELECT MAX(price) FROM printer)
+___________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=11
+Задание: 11 
+Найдите среднюю скорость ПК.
+Решение:
+SELECT AVG(speed) 
+FROM PС
+__________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=12
+Задание: 12 
+Найдите среднюю скорость ПК-блокнотов, цена которых превышает 1000 дол.
+Решение:
+SELECT AVG(speed)
+FROM Laptop
+WHERE price>1000
+__________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=13
+Задание: 13
+Найдите среднюю скорость ПК, выпущенных производителем A.
+Решение:
+SELECT AVG(speed) as speed
+FROM PC
+WHERE model IN (SELECT Model FROM Product WHERE maker='A')
+__________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=14
+Задание: 14 
+Найдите класс, имя и страну для кораблей из таблицы Ships, имеющих не менее 10 орудий
+Решение:
+SELECT Ships.class,Ships.name,Classes.country 
+FROM Ships
+JOIN Classes 
+ON Ships.class = Classes.class
+WHERE Classes.numGuns>= 10
+__________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=15
+Задание: 15 
+Найдите размеры жестких дисков, совпадающих у двух и более PC. Вывести: HD
+Решение:
+SELECT HD
+FROM PC
+GROUP BY hd
+HAVING COUNT(hd)>1
+__________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=31
+Задание: 31
+Для классов кораблей, калибр орудий которых не менее 16 дюймов, укажите класс и страну.
+Решение:
+SELECT class, country
+FROM Classes
+WHERE bore>=16 
+__________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=33
+Задание: 33
+Укажите корабли, потопленные в сражениях в Северной Атлантике (North Atlantic). Вывод: ship.
+Решение:
+SELECT ship
+FROM Outcomes
+WHERE result='sunk' AND (battle='North Atlantic')
+__________________________________________________________________________________________
+Решения на задания онлайн-тренажера https://www.sql-ex.ru/learn_exercises.php?LN=40
+Задание: 40
+Найти производителей, которые выпускают более одной модели, при этом все выпускаемые производителем модели являются продуктами одного типа.
+Вывести: maker, type
+Решение:
+SELECT maker, MAX(type)
+FROM product
+GROUP BY maker
+HAVING COUNT(model) > 1 AND MAX(type)=MIN(type)
+__________________________________________________________________________________________
+
