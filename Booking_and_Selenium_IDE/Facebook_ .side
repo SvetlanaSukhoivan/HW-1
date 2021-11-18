@@ -1,0 +1,107 @@
+{
+  "id": "8c8be2b8-b048-4d5e-a168-85b2e4f8ecfb",
+  "version": "2.0",
+  "name": "Facebook_Варианты досуга",
+  "url": "https://www.booking.com",
+  "tests": [{
+    "id": "af1b6883-afa3-4334-9b3c-330825e46a94",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "0ad42bb2-ea00-4fbf-a53c-87403b71643f",
+    "name": "Варианты досуга ",
+    "commands": [{
+      "id": "ec631de2-d664-475c-afe6-6b98f59c78ba",
+      "comment": "",
+      "command": "open",
+      "target": "/index.ru.html?label=gen173nr-1DCAEoggI46AdIM1gEaCWIAQGYASG4ARfIAQzYAQPoAQGIAgGoAgO4AqXR6IYGwAIB0gIkZjkyNzU3MTItOGMxYy00MDU5LTlhM2ItMWQwZWQ3MDIwNzgw2AIE4AIB;sid=0d4f5ba784a197f68b4b0219151d78d4;keep_landing=1&sb_price_type=total&",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48174442-d529-46f6-8c7d-444451524774",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x849",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a6bef0ba-f36c-47e0-b869-8cd57aec67e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bui-tab__item:nth-child(4) .bui-tab__text",
+      "targets": [
+        ["css=.bui-tab__item:nth-child(4) .bui-tab__text", "css:finder"],
+        ["xpath=//body[@id='b2indexPage']/header/nav[2]/ul/li[4]/a/span[2]", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Варианты досуга')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "777fc4b6-9a5c-4817-8bf8-11bf151c619d",
+      "comment": "",
+      "command": "click",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.css-1c7o93e", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/div[3]/div/div[3]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1462fc7-cfeb-41cd-be7a-eff3e4cef16b",
+      "comment": "",
+      "command": "type",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.css-1c7o93e", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/div[3]/div/div[3]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "милан"
+    }, {
+      "id": "ee7fee06-b091-48b7-a19a-5da62a42bcc0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-17fljn7:nth-child(1) > .css-9dv5ti:nth-child(2) .Text-module__root--variant-body_2___135oG",
+      "targets": [
+        ["css=.css-17fljn7:nth-child(1) > .css-9dv5ti:nth-child(2) .Text-module__root--variant-body_2___135oG", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div[3]/div/div[3]/div/div[2]/ul/li[2]/a/div[2]/div", "xpath:idRelative"],
+        ["xpath=//a/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4082f559-a2ae-4b8c-9c72-4baa0018c370",
+      "comment": "",
+      "command": "click",
+      "target": "css=span > img",
+      "targets": [
+        ["css=span > img", "css:finder"],
+        ["xpath=//img[@alt='Booking.com']", "xpath:img"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/header/nav/div/div/a/span/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf2f288d-a889-4859-ac89-25d9dafd215b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c53d136e-bd87-4990-8f16-2bed48fda550",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["af1b6883-afa3-4334-9b3c-330825e46a94"]
+  }],
+  "urls": ["https://www.booking.com/"],
+  "plugins": []
+}
