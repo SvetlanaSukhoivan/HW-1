@@ -62,7 +62,7 @@ WHERE id = 10
 -- 18. ¬ывести пользовател€ у которых id равен 53
 SELECT *
 FROM students
-WHERE id = 10
+WHERE id = 53
 -- 19. ¬ывести пользовател€ у которых id больше 40
 SELECT *
 FROM students
